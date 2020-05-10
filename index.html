@@ -16,23 +16,28 @@
   <nav class="navbar navbar-light bg-light">
     <a class="navbar-brand" href="#">Airbnb</a>
   </nav>
-
-  <div class="container-fluid">
+  <div class="container">
     <div class="row">
-      <div class="col-md-12">
-        <div class="row">
-          <div class="col-md-4">
-
+      <form>
+        <div class="form-group row">
+          <div class="col-sm-4">
+            <label for="localizacao">Localização</label>
+            <input type="text" name="localizacao" id="localizacao" class="form-control"
+              placeholder="Para onde você vai?" required>
           </div>
-          <div class="col-md-4">
-
+          <div class="col-sm-4">
+            <label for="checkin">Check-in</label>
+            <input type="date" name="checkin" id="checkin" class="form-control" required>
           </div>
-          <div class="col-md-4">
-
+          <div class="col-sm-4">
+            <label for="checkout">Checkout</label>
+            <input type="date" name="checkout" id="checkout" class="form-control" required>
           </div>
         </div>
-      </div>
+      </form>
     </div>
+
+    <div class="row" id="listBedroom"></div>
   </div>
 
 </body>
