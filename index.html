@@ -5,40 +5,59 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quartos Airbnb</title>
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <!-- Bootstrap Material Design -->
+  <link rel="stylesheet"
+    href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
+    integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+  <!-- Fontawesome -->
+  <script src="https://kit.fontawesome.com/4f1d3e52f2.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
   <nav class="navbar navbar-light bg-light">
-    <a class="navbar-brand" href="#">Airbnb</a>
+    <a class="navbar-brand" href="#">
+      <img src="assets/images/Airbnb_Logo.svg" width="100%" height="40">
+    </a>
   </nav>
-  <div class="container">
+  <section class="container">
     <div class="row">
-      <form>
-        <div class="form-group row">
-          <div class="col-sm-4">
-            <label for="localizacao">Localização</label>
-            <input type="text" name="localizacao" id="localizacao" class="form-control"
-              placeholder="Para onde você vai?" required>
+      <div class="col">
+        <form class="mt-4">
+          <div class="form-group row">
+            <div class="col-sm-4">
+              <label for="localizacao">Localização</label>
+              <input type="text" name="localizacao" id="localizacao" class="form-control localizacao-input"
+                placeholder="Para onde você vai?" required>
+            </div>
+            <div class="col-sm-3">
+              <label for="checkin">Check-in</label>
+              <input type="date" name="checkin" id="checkin" class="form-control" required>
+            </div>
+            <div class="col-sm-3">
+              <label for="checkout">Checkout</label>
+              <input type="date" name="checkout" id="checkout" class="form-control" required>
+            </div>
+            <div class="col-sm-2 align-self-center text-center">
+              <button type="button" class="btn btn-outline-info mb-0"><i class="fas fa-search"></i></button>
+            </div>
           </div>
-          <div class="col-sm-4">
-            <label for="checkin">Check-in</label>
-            <input type="date" name="checkin" id="checkin" class="form-control" required>
-          </div>
-          <div class="col-sm-4">
-            <label for="checkout">Checkout</label>
-            <input type="date" name="checkout" id="checkout" class="form-control" required>
-          </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
 
     <div class="row" id="listBedroom"></div>
-  </div>
+  </section>
 
+  <footer class="container text-center">
+    <p>
+      Desenvolvido por
+      <a href="https://github.com/rafaelfborges">Rafael Borges</a>
+      para o programa Hiring Coders da
+      <a href="https://gama.academy/">Gama Academy</a>.
+    </p>
+  </footer>
+  <!-- Custom Script-->
   <script src="assets/js/script.js"></script>
 </body>
 

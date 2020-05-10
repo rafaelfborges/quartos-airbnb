@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.card {
+  min-height: 100%;
+}
+
+.card-img-top {
+  height: 250px;
+}
+
+.localizacao-input {
+  margin-top: 5px;
+}

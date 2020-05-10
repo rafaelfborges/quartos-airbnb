@@ -12,13 +12,15 @@ function listBedroom() {
   findAllBedroom().then(data => {
     data.map(item => {
       const div = document.createElement("div");
-      div.className = "card";
+      div.className = "col-sm-4 mb-4";
       div.innerHTML = `
-        <img src="${item.photo}" class="card-img-top" alt="${item.property_type}">
-        <div class="card-body">
-          <h5 class="card-title">${item.property_type}</h5>
-          <p class="card-text">${item.name}</p>
-          <p class="card-text">R$${item.price},00</p>
+        <div class="card">
+          <img class="card-img-top" src="${item.photo}" alt="${item.property_type}">
+          <div class="card-body">
+            <h5 class="card-title">${item.property_type}</h5>
+            <p class="card-text">${item.name}</p>
+            <p class="card-text">R$${item.price},00</p>
+          </div>
         </div>
       `
       listContent.appendChild(div);
